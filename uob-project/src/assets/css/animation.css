@@ -1,0 +1,48 @@
+.fadeOut{
+    animation: fadeOut;
+    animation-duration: 1s;
+}
+
+.fadeIn{
+    animation: fadeIn;
+    animation-duration: 1s;
+}
+
+.mordalFadeIn{
+    animation: fadeIn;
+    animation-duration: 0.4s;
+}
+
+.fadeInUp{
+    animation: fadeInUp;
+    animation-duration: 0.5s;
+}
+
+.fadeOutDown{
+    animation: fadeOutDown;
+    animation-duration: 0.5s;
+}
+
+.bounceIn{
+    animation: bounceIn;
+    animation-duration: 1s;
+}
+
+.bounce{
+    animation: bounce;
+    animation-duration: 1s;
+}
+
+.shakeX{
+    animation: shakeX;
+    animation-duration: 0.3s;
+}
+
+.fadeInLeft{
+	animation: fadeInLeft;
+    animation-duration: 0.5s;
+}
+.fadeOutLeft{
+	animation: fadeOutLeft;
+    animation-duration: 0.5s;
+}

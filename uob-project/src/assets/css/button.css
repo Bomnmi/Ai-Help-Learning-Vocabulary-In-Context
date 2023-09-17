@@ -1,0 +1,8 @@
+.selectedColor:hover{
+    background: linear-gradient(268deg, rgba(253.52, 142.28, 142.28, 0.50) 9%, #FFB4B4 41%, rgba(252.01, 104.37, 104.37, 0.10) 100%);
+    cursor: pointer;
+}
+
+.buttonSelected{
+    background: linear-gradient(268deg, rgba(253.52, 142.28, 142.28, 0.50) 9%, #FFB4B4 41%, rgba(252.01, 104.37, 104.37, 0.10) 100%);
+}

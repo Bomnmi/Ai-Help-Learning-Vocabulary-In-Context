@@ -1,0 +1,11 @@
+.fontType{
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: 400; 
+    word-wrap: break-word
+}
+
+.numberType{
+    font-family: 'Abel'; 
+    font-weight: 400; 
+    word-wrap: break-word
+}

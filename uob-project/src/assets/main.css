@@ -1,0 +1,26 @@
+@import './base.css';
+@import "animate.css";
+
+@font-face {
+  font-family: "Abel";
+  src: url('@/assets/font/Abel-Regular.ttf') format("truetype");
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.indexPageDiv{
+    
+  height: 100%;
+  width: 63.1rem;
+  right:5%;
+  position: absolute;
+}
+
+
+
+
+
