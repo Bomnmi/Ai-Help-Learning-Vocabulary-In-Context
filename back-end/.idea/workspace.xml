@@ -5,83 +5,319 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ed5384b-5d43-4406-a0d5-24d7c52b5a79" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/micr-api/src/main/java/com/ailearningvocabulary/bomnmi/api/model/Quiz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micr-api/src/main/java/com/ailearningvocabulary/bomnmi/api/pojo/QuizSetting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micr-api/src/main/java/com/ailearningvocabulary/bomnmi/api/service/QuizService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micr-api/src/main/java/com/ailearningvocabulary/bomnmi/api/service/RecordService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micr-api/src/main/java/com/ailearningvocabulary/bomnmi/api/service/VocabularyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micr-common/src/main/java/com/ailearningvocabulary/bomnmi/common/utils/HttpUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micr-common/src/main/java/com/ailearningvocabulary/bomnmi/common/utils/QuizUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micr-common/src/test/java/com/ailearningvocabulary/test/ReentrantLockTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micr-dataset/src/main/java/com/ailearningvocabulary/bomnmi/dataset/mappers/QuizMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micr-dataset/src/main/java/com/ailearningvocabulary/bomnmi/dataset/service/QuizServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micr-dataset/src/main/java/com/ailearningvocabulary/bomnmi/dataset/service/RecordServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micr-dataset/src/main/java/com/ailearningvocabulary/bomnmi/dataset/service/VocabularyServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micr-dataset/src/main/java/com/ailearningvocabulary/bomnmi/dataset/settings/RedisConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micr-dataset/src/main/resources/mappers/QuizMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micr-web/src/main/java/com/ailearningvocabulary/bomnmi/web/controller/QuizController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micr-web/src/main/java/com/ailearningvocabulary/bomnmi/web/controller/SettingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micr-web/src/main/java/com/ailearningvocabulary/bomnmi/web/service/BaseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micr-web/src/main/java/com/ailearningvocabulary/bomnmi/web/service/QuizPageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micr-web/src/main/java/com/ailearningvocabulary/bomnmi/web/service/TranslationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micr-web/src/main/java/com/ailearningvocabulary/bomnmi/web/service/impl/DeepLTranslationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micr-web/src/main/java/com/ailearningvocabulary/bomnmi/web/service/impl/FreeDictionaryDefinitionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micr-web/src/main/java/com/ailearningvocabulary/bomnmi/web/service/impl/QuizPageServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micr-web/src/main/java/com/ailearningvocabulary/bomnmi/web/service/impl/TranslationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micr-web/src/main/java/com/ailearningvocabulary/bomnmi/web/view/ResponseQuizProblem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/micr-web/src/main/java/com/ailearningvocabulary/bomnmi/web/view/ResponseWordDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micr-api/src/main/java/com/ailearningvocabulary/bomnmi/api/service/ArticleService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/micr-dataservice/GeneratorMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/micr-dataservice/src/main/java/com/ailearningvocabulary/bomnmi/dataservice/service/UserServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/micr-dataservice/src/main/resources/mappers/FriendMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/micr-dataservice/src/test/java/com/ailearningvocabulary/bomnmi/dataservice/DemoTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/micr-dataservice/src/test/java/com/ailearningvocabulary/bomnmi/dataservice/mappers/UserMapperTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/micr-dataservice/src/test/java/com/ailearningvocabulary/bomnmi/dataservice/mappers/VocabularyMapperTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/micr-dataservice/src/test/java/com/ailearningvocabulary/bomnmi/dataservice/service/DemoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/micr-dataservice/src/test/java/com/ailearningvocabulary/bomnmi/dataservice/service/UserServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/micr-dataservice/src/test/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/micr-dataservice/src/test/resources/db/schema-h2.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/micr-web/src/main/java/com/ailearningvocabulary/bomnmi/web/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/micr-web/src/main/java/com/ailearningvocabulary/bomnmi/web/service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micr-web/src/main/java/com/ailearningvocabulary/bomnmi/web/service/CoreNLPService.java" beforeDir="false" afterPath="$PROJECT_DIR$/micr-web/src/main/java/com/ailearningvocabulary/bomnmi/web/service/NLPService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micr-web/src/main/java/com/ailearningvocabulary/bomnmi/web/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/micr-web/src/main/java/com/ailearningvocabulary/bomnmi/web/service/impl/ArticleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micr-web/src/main/java/com/ailearningvocabulary/bomnmi/web/service/impl/ChatGptServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/micr-web/src/main/java/com/ailearningvocabulary/bomnmi/web/service/impl/ChatGptServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micr-web/src/main/java/com/ailearningvocabulary/bomnmi/web/service/impl/CoreNLPServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/micr-web/src/main/java/com/ailearningvocabulary/bomnmi/web/service/impl/CoreNLPServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/micr-web/src/main/java/com/ailearningvocabulary/bomnmi/web/service/impl/SuperMemo2SpaceRepetitionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/micr-web/src/main/java/com/ailearningvocabulary/bomnmi/web/service/impl/SuperMemo2SpaceRepetitionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/assets/css/animation.css" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/assets/css/animation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/assets/css/font.css" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/assets/css/font.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/assets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/assets/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/assets/store/modules/modal_param.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/assets/store/modules/modal_param.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/assets/store/modules/today_word.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/assets/store/modules/today_word.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/assets/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/assets/store/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/assets/utils/axios-util.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/assets/utils/axios-util.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/assets/utils/util-method.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/assets/utils/util-method.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/components/login/Button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/components/login/Button.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/components/login/Input.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/components/login/Input.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/components/login/Tag.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/components/login/Tag.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/components/main_page/ArticleTitle.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/components/main_page/Book.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/components/main_page/Book.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/components/main_page/PageHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/components/main_page/PageHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/components/main_page/ProfileModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/components/main_page/ProfileModal.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/components/main_page/TodayWordList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/components/main_page/TodayWordList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/components/main_page/WordModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/components/main_page/WordModal.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/components/setting/Calendar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/components/setting/Calendar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/components/setting/Profile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/components/setting/Profile.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/components/setting/RecentWords.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/components/setting/RecentWords.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/components/setting/SettingPanel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/components/setting/SettingPanel.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/components/setting/Statistics.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/components/setting/Statistics.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/components/setting/VocabularyRepository.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/components/setting/VocabularyRepository.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/components/svg/CheckIn.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/components/svg/CheckIn.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/components/svg/Modify.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/components/svg/Modify.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/view/login/LoginView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/view/login/LoginView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/view/login/RegisterView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/view/login/RegisterView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/view/login/VerificationView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/view/login/VerificationView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/view/main_page/ArticleView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/view/main_page/ArticleView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fronend/uob-project/src/view/setting/SettingView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../fronend/uob-project/src/view/setting/SettingView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_51.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_spring_spring_context_support_1_0_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_apple_AppleJavaExtensions_1_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_13_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_13_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_13_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_7_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_13_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_13_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_13_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_xiaoymin_swagger_bootstrap_ui_1_9_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_2_2_220.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_kjetland_mbknor_jackson_jsonschema_2_12_1_0_34.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mysql_mysql_connector_j_8_0_33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_4_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okio_okio_2_8_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_retrofit2_adapter_rxjava2_2_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_retrofit2_converter_jackson_2_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_retrofit2_retrofit_2_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_activation_jakarta_activation_1_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_jakarta_mail_1_6_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_core_2_3_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_4_0_b180830_0438.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_theokanning_openai_gpt3_java_api_0_14_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_theokanning_openai_gpt3_java_client_0_14_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_theokanning_openai_gpt3_java_service_0_14_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_4_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_15.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__de_jollyday_jollyday_0_4_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__edu_mit_jwi_2_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__edu_stanford_nlp_stanford_corenlp_4_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__edu_stanford_nlp_stanford_corenlp_models_4_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__edu_stanford_nlp_stanford_corenlp_models_english_4_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__edu_stanford_nlp_stanford_corenlp_models_english_kbp_4_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_classgraph_classgraph_4_8_21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_api_0_11_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_impl_0_11_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_jackson_0_11_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_6_1_10_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_all_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_dns_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_haproxy_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http2_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_memcache_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_mqtt_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_redis_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_smtp_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_socks_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_stomp_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_xml_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_proxy_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_ssl_ocsp_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_classes_macos_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_native_macos_osx_aarch_64_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_dns_native_macos_osx_x86_64_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_classes_epoll_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_classes_kqueue_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_linux_aarch_64_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_linux_x86_64_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_kqueue_osx_aarch_64_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_kqueue_osx_x86_64_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_rxtx_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_sctp_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_udt_4_1_94_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_4_30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxjava2_rxjava_2_2_21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_models_1_5_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jline_jline_0_9_94.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_12_23.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_12_23.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_2_4_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_4_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_12_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_client_4_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_framework_4_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_recipes_4_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_dubbo_dubbo_2_7_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_dubbo_dubbo_spring_boot_autoconfigure_2_7_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_dubbo_dubbo_spring_boot_autoconfigure_compatible_2_7_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_dubbo_dubbo_spring_boot_starter_2_7_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_17_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_17_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_analyzers_common_7_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_core_7_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_queries_7_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_queryparser_7_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_sandbox_7_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_76.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_76.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_76.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_yetus_audience_annotations_0_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_22_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ejml_ejml_cdense_0_39.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ejml_ejml_core_0_39.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ejml_ejml_ddense_0_39.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ejml_ejml_dsparse_0_39.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ejml_ejml_fdense_0_39.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ejml_ejml_fsparse_0_39.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ejml_ejml_simple_0_39.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ejml_ejml_zdense_0_39.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_javax_json_1_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_25_0_GA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_13_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_1_6_21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_common_1_6_21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_2_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_4_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_4_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_2_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_2_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_2_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_2_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_test_2_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_test_autoconfigure_2_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_library_2_12_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_36.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_36.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_reload4j_1_7_36.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_7_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_7_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_7_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_7_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_7_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_7_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_7_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_7_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_7_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_7_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_7_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_7_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_7_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_mail_2_7_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_7_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_7_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_7_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_7_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_7_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_7_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_7_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_7_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_7_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_7_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_7_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_1_2_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_1_2_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_29.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_3_28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_3_29.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_29.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_3_28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_29.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_29.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_29.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_29.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_3_28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_3_28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_3_29.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_29.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_3_28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_serializer_2_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_xalan_2_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xerces_xercesImpl_2_8_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_3_03.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xom_xom_1_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-api/target/classes/com/ailearningvocabulary/bomnmi/api/model/Friend.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-api/target/classes/com/ailearningvocabulary/bomnmi/api/model/FriendKey.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-api/target/classes/com/ailearningvocabulary/bomnmi/api/model/Paragraph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-api/target/classes/com/ailearningvocabulary/bomnmi/api/model/ParagraphVocabulary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-api/target/classes/com/ailearningvocabulary/bomnmi/api/model/Quiz.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-api/target/classes/com/ailearningvocabulary/bomnmi/api/model/Record.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-api/target/classes/com/ailearningvocabulary/bomnmi/api/model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-api/target/classes/com/ailearningvocabulary/bomnmi/api/model/UserVocabulary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-api/target/classes/com/ailearningvocabulary/bomnmi/api/model/UserVocabularyKey.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-api/target/classes/com/ailearningvocabulary/bomnmi/api/model/Vocabulary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-api/target/classes/com/ailearningvocabulary/bomnmi/api/pojo/QuizSetting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-api/target/classes/com/ailearningvocabulary/bomnmi/api/service/ParagraphService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-api/target/classes/com/ailearningvocabulary/bomnmi/api/service/ParagraphVocabularyService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-api/target/classes/com/ailearningvocabulary/bomnmi/api/service/QuizService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-api/target/classes/com/ailearningvocabulary/bomnmi/api/service/RecordService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-api/target/classes/com/ailearningvocabulary/bomnmi/api/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-api/target/classes/com/ailearningvocabulary/bomnmi/api/service/UserVocabularyService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-api/target/classes/com/ailearningvocabulary/bomnmi/api/service/VocabularyService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-common/target/classes/com/ailearningvocabulary/bomnmi/common/constants/RedisConstant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-common/target/classes/com/ailearningvocabulary/bomnmi/common/enums/ResultCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-common/target/classes/com/ailearningvocabulary/bomnmi/common/exception/ProjectException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-common/target/classes/com/ailearningvocabulary/bomnmi/common/interfaces/ResponseInfoInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-common/target/classes/com/ailearningvocabulary/bomnmi/common/utils/CommonUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-common/target/classes/com/ailearningvocabulary/bomnmi/common/utils/HttpUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-common/target/classes/com/ailearningvocabulary/bomnmi/common/utils/QuizUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-common/target/classes/com/ailearningvocabulary/bomnmi/common/utils/ReflectUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-common/target/classes/com/ailearningvocabulary/bomnmi/common/utils/SpaceRepetitionAlgorithm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-common/target/test-classes/com/ailearningvocabulary/test/ReentrantLockTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-common/target/test-classes/com/ailearningvocabulary/test/pojo/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-common/target/test-classes/com/ailearningvocabulary/test/testReflectUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/micr-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/micr-web/micr-web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/MicrWebApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/aspect/ParamValidationAspect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/controller/ArticleController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/controller/BaseController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/controller/QuizController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/controller/SettingController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/handler/GlobalExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/interceptor/TokenInterceptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/pojo/AiContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/pojo/AiContexts.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/pojo/OpenAi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/service/AiService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/service/ArticleService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/service/BaseService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/service/EmailService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/service/NLPService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/service/QuizPageService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/service/SpaceRepetitionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/service/TokenService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/service/TranslationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/service/impl/ArticleServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/service/impl/ChatGptServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/service/impl/CoreNLPServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/service/impl/DeepLTranslationServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/service/impl/EmailServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/service/impl/FreeDictionaryDefinitionServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/service/impl/QuizPageServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/service/impl/SuperMemo2SpaceRepetitionServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/service/impl/TokenServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/service/impl/TranslationServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/settings/CoreNLPConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/settings/JacksonConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/settings/OpenAiConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/settings/SwaggerConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/settings/WebMvcConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/view/ResponseParagraph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/view/ResponseQuizProblem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/view/ResponseResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/classes/com/ailearningvocabulary/bomnmi/web/view/ResponseWordDefinition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/test-classes/com/ailearningvocabulary/bomnmi/web/MicrWebApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/test-classes/com/ailearningvocabulary/bomnmi/web/service/impl/CoreNLPServiceImplTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/test-classes/com/ailearningvocabulary/bomnmi/web/service/impl/SuperMemo2SpaceRepetitionServiceImplTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/micr-web/target/test-classes/com/ailearningvocabulary/bomnmi/web/service/impl/TokenServiceImplTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,6 +398,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -169,7 +406,7 @@
     <property name="go.formatter.settings.were.checked" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="corretto-1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Ai-help-learning-vocabulary-in-/back-end" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -287,21 +524,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="test" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.test.TestApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="micr-dataservice" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="micr-dataservice" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ailearningvocabulary.bomnmi.dataservice.MicrDataserviceApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="micr-dataset" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="micr-dataset" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ailearningvocabulary.bomnmi.dataset.MicrDatasetApplication" />
@@ -335,8 +557,6 @@
       <item itemvalue="JUnit.UserVocabularyMapperTest.testSelectByPrimaryKey" />
       <item itemvalue="JUnit.testReflectUtil.testRandom" />
       <item itemvalue="Spring Boot.micr-web" />
-      <item itemvalue="Spring Boot.micr-dataservice" />
-      <item itemvalue="Spring Boot.TestApplication" />
       <item itemvalue="Spring Boot.micr-dataset" />
     </list>
     <recent_temporary>
@@ -430,6 +650,7 @@
       <workItem from="1694800617664" duration="4406000" />
       <workItem from="1694978976985" duration="1412000" />
       <workItem from="1694980800229" duration="980000" />
+      <workItem from="1694982586313" duration="403000" />
     </task>
     <servers />
   </component>
