@@ -16,7 +16,6 @@
     <bytecodeTargetLevel>
       <module name="micr-api" target="8" />
       <module name="micr-common" target="8" />
-      <module name="micr-dataservice" target="8" />
       <module name="micr-dataset" target="8" />
       <module name="micr-parent" target="8" />
       <module name="micr-web" target="8" />
@@ -27,7 +26,6 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="micr-api" options="-parameters" />
       <module name="micr-common" options="-parameters" />
-      <module name="micr-dataservice" options="-parameters" />
       <module name="micr-dataset" options="-parameters" />
       <module name="micr-parent" options="" />
       <module name="micr-web" options="-parameters" />
