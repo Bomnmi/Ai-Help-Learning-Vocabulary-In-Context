@@ -45,7 +45,7 @@ dubbo:
 
 ai:
   chat-gpt:
-    api-key: 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
+    api-key: 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
     words-limit: 5
     token-limit: 1000
     paragraph-type: article,paragraph,context,story
@@ -53,7 +53,7 @@ ai:
     url: https://api.dictionaryapi.dev/api/v2/entries/en/
   deepL:
     url: https://api-free.deepl.com/v2/translate
-    api-key: 520827e9-d840-f6ae-fd96-ab0f2ceddb21:fx
+    api-key: 520827e9-d840-f6ae-fd96-ab0f2ceddb21:31
   recent-days: 7
   quiz-setting:
     distract-options: 3
