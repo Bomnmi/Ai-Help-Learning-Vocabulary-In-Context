@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ailearningvocabulary.bomnmi.dataset.mappers.VocabularyMapper">
+  <resultMap id="BaseResultMap" type="com.ailearningvocabulary.bomnmi.api.model.Vocabulary">
+    <result column="word" jdbcType="VARCHAR" property="word" />
+    <result column="phonetic" jdbcType="VARCHAR" property="phonetic" />
+    <result column="definition" jdbcType="VARCHAR" property="definition" />
+    <result column="translation" jdbcType="VARCHAR" property="translation" />
+    <result column="pos" jdbcType="VARCHAR" property="pos" />
+    <result column="collins" jdbcType="VARCHAR" property="collins" />
+    <result column="oxford" jdbcType="VARCHAR" property="oxford" />
+    <result column="tag" jdbcType="VARCHAR" property="tag" />
+    <result column="bnc" jdbcType="VARCHAR" property="bnc" />
+    <result column="frq" jdbcType="VARCHAR" property="frq" />
+    <result column="exchange" jdbcType="VARCHAR" property="exchange" />
+    <result column="detail" jdbcType="VARCHAR" property="detail" />
+    <result column="audio" jdbcType="VARCHAR" property="audio" />
+  </resultMap>
+  <sql id="BaseColumnList">
+    word,phonetic,definition,translation,pos,collins,oxford,tag,bnc,frq,exchange,detail,audio
+  </sql>
+
+  <insert id="insert" parameterType="com.ailearningvocabulary.bomnmi.api.model.Vocabulary">
+    insert into t_vocabulary (word, phonetic, definition, 
+      translation, pos, collins, 
+      oxford, tag, bnc, frq, 
+      exchange, detail, audio
+      )
+    values (#{word,jdbcType=VARCHAR}, #{phonetic,jdbcType=VARCHAR}, #{definition,jdbcType=VARCHAR}, 
+      #{translation,jdbcType=VARCHAR}, #{pos,jdbcType=VARCHAR}, #{collins,jdbcType=VARCHAR}, 
+      #{oxford,jdbcType=VARCHAR}, #{tag,jdbcType=VARCHAR}, #{bnc,jdbcType=VARCHAR}, #{frq,jdbcType=VARCHAR}, 
+      #{exchange,jdbcType=VARCHAR}, #{detail,jdbcType=VARCHAR}, #{audio,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.ailearningvocabulary.bomnmi.api.model.Vocabulary">
+    insert into t_vocabulary
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="word != null">
+        word,
+      </if>
+      <if test="phonetic != null">
+        phonetic,
+      </if>
+      <if test="definition != null">
+        definition,
+      </if>
+      <if test="translation != null">
+        translation,
+      </if>
+      <if test="pos != null">
+        pos,
+      </if>
+      <if test="collins != null">
+        collins,
+      </if>
+      <if test="oxford != null">
+        oxford,
+      </if>
+      <if test="tag != null">
+        tag,
+      </if>
+      <if test="bnc != null">
+        bnc,
+      </if>
+      <if test="frq != null">
+        frq,
+      </if>
+      <if test="exchange != null">
+        exchange,
+      </if>
+      <if test="detail != null">
+        detail,
+      </if>
+      <if test="audio != null">
+        audio,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="word != null">
+        #{word,jdbcType=VARCHAR},
+      </if>
+      <if test="phonetic != null">
+        #{phonetic,jdbcType=VARCHAR},
+      </if>
+      <if test="definition != null">
+        #{definition,jdbcType=VARCHAR},
+      </if>
+      <if test="translation != null">
+        #{translation,jdbcType=VARCHAR},
+      </if>
+      <if test="pos != null">
+        #{pos,jdbcType=VARCHAR},
+      </if>
+      <if test="collins != null">
+        #{collins,jdbcType=VARCHAR},
+      </if>
+      <if test="oxford != null">
+        #{oxford,jdbcType=VARCHAR},
+      </if>
+      <if test="tag != null">
+        #{tag,jdbcType=VARCHAR},
+      </if>
+      <if test="bnc != null">
+        #{bnc,jdbcType=VARCHAR},
+      </if>
+      <if test="frq != null">
+        #{frq,jdbcType=VARCHAR},
+      </if>
+      <if test="exchange != null">
+        #{exchange,jdbcType=VARCHAR},
+      </if>
+      <if test="detail != null">
+        #{detail,jdbcType=VARCHAR},
+      </if>
+      <if test="audio != null">
+        #{audio,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="selectVocabularyByWord" resultType="com.ailearningvocabulary.bomnmi.api.model.Vocabulary">
+    select <include refid="BaseColumnList"></include> from t_vocabulary_${prefix} where word = #{word};
+  </select>
+    <select id="selectLimitCommonVocabularyExcludeSomeWords" resultType="com.ailearningvocabulary.bomnmi.api.model.Vocabulary">
+      select <include refid="BaseColumnList"></include> from t_vocabulary_common
+      where <foreach collection="wordList" item="word" separator="and">
+        word != #{word}
+        </foreach>
+      order by RAND() limit 0, ${wordNumber};
+    </select>
+  <select id="selectCommonVocabulary" resultType="com.ailearningvocabulary.bomnmi.api.model.Vocabulary">
+     select <include refid="BaseColumnList"></include> from t_vocabulary_common where word = #{word};
+  </select>
+</mapper>

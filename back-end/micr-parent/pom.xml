@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--SpringBoot parent project-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.13</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>com.ailearningvocabulary.bomnmi</groupId>
+    <artifactId>micr-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+
+    <!--聚合-->
+    <modules>
+        <module>../micr-web</module>
+        <module>../micr-api</module>
+        <module>../micr-common</module>
+        <module>../micr-dataset</module>
+    </modules>
+
+    <properties>
+        <dubbo.version>2.7.8</dubbo.version>
+        <zookeeper.version>2.7.8</zookeeper.version>
+        <mybatis.version>2.2.0</mybatis.version>
+        <fastjson.version>1.2.51</fastjson.version>
+        <swagger.version>2.9.2</swagger.version>
+        <swagger.bootstrap.version>1.9.6</swagger.bootstrap.version>
+        <jwt.version>0.11.2</jwt.version>
+        <h2.version>2.2.220</h2.version>
+        <nylas.version>1.21.0</nylas.version>
+        <gpt.version>0.14.0</gpt.version>
+        <corenlp.version>4.4.0</corenlp.version>
+        <jwi.version>2.2.3</jwi.version>
+    </properties>
+
+    <!--Manage Dependencies-->
+    <dependencyManagement>
+        <dependencies>
+            <!-- JWI (Java WordNet Interface) dependencies -->
+            <dependency>
+                <groupId>edu.mit</groupId>
+                <artifactId>jwi</artifactId>
+                <version>${jwi.version}</version>
+            </dependency>
+            <!--NLP: Handle lemmatization-->
+            <dependency>
+                <groupId>edu.stanford.nlp</groupId>
+                <artifactId>stanford-corenlp</artifactId>
+                <version>${corenlp.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>edu.stanford.nlp</groupId>
+                <artifactId>stanford-corenlp</artifactId>
+                <version>${corenlp.version}</version>
+                <classifier>models</classifier>
+            </dependency>
+            <dependency>
+                <groupId>edu.stanford.nlp</groupId>
+                <artifactId>stanford-corenlp</artifactId>
+                <version>${corenlp.version}</version>
+                <classifier>models-english</classifier>
+            </dependency>
+            <dependency>
+                <groupId>edu.stanford.nlp</groupId>
+                <artifactId>stanford-corenlp</artifactId>
+                <version>${corenlp.version}</version>
+                <classifier>models-english-kbp</classifier>
+            </dependency>
+
+            <!--chatGPT-->
+            <dependency>
+                <groupId>com.theokanning.openai-gpt3-java</groupId>
+                <artifactId>service</artifactId>
+                <version>${gpt.version}</version>
+            </dependency>
+            <!--nylas Send email-->
+            <dependency>
+                <groupId>com.nylas.sdk</groupId>
+                <artifactId>nylas-java-sdk</artifactId>
+                <version>${nylas.version}</version>
+            </dependency>
+
+            <!--h2 database-->
+            <dependency>
+                <groupId>com.h2database</groupId>
+                <artifactId>h2</artifactId>
+                <version>${h2.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <!--jwt-->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-api</artifactId>
+                <version>${jwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-impl</artifactId>
+                <version>${jwt.version}</version>
+                <scope>runtime</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-jackson</artifactId> <!-- or jjwt-gson if Gson is preferred -->
+                <version>${jwt.version}</version>
+                <scope>runtime</scope>
+            </dependency>
+
+            <!--Dubbo-->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+            <!--Zookeeper-->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-dependencies-zookeeper</artifactId>
+                <version>${zookeeper.version}</version>
+                <type>pom</type>
+                <exclusions>
+                    <exclusion>
+                        <groupId>slf4j-log4j12</groupId>
+                        <artifactId>org.slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <!--MyBatis-->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>ch.qos.logback</groupId>
+                        <artifactId>logback-classic</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <!--FastJson-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <!--swagger-->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>swagger-bootstrap-ui</artifactId>
+                <version>${swagger.bootstrap.version}</version>
+            </dependency>
+        </dependencies>
+
+
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>

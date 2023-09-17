@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ailearningvocabulary.bomnmi.dataset.mappers.ParagraphVocabularyMapper">
+  <resultMap id="BaseResultMap" type="com.ailearningvocabulary.bomnmi.api.model.ParagraphVocabulary">
+    <id column="paragraph_id" jdbcType="VARCHAR" property="paragraphId" />
+    <id column="word" jdbcType="VARCHAR" property="word" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="com.ailearningvocabulary.bomnmi.api.model.ParagraphVocabulary">
+    delete from t_paragraph_vocabulary
+    where paragraph_id = #{paragraphId,jdbcType=VARCHAR}
+      and word = #{word,jdbcType=VARCHAR}
+  </delete>
+    <select id="selectWordsByParagraphId" resultType="java.lang.String">
+        select word from t_paragraph_vocabulary where paragraph_id = #{paragraphId};
+    </select>
+    <select id="selectUnReviewedWordByParagraphId" resultType="java.lang.String">
+      SELECT pv.word as word FROM t_paragraph p join t_paragraph_vocabulary pv on p.id =  pv.paragraph_id
+      join t_user_vocabulary uv on pv.word = uv.word
+      where p.id = #{paragraphId} and IFNULL(DATE(uv.last_review_time), '2001-07-14') &lt; CURDATE();
+
+    </select>
+
+    <insert id="insert" parameterType="com.ailearningvocabulary.bomnmi.api.model.ParagraphVocabulary">
+    insert into t_paragraph_vocabulary (paragraph_id, word)
+    values (#{paragraphId,jdbcType=VARCHAR}, #{word,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ailearningvocabulary.bomnmi.api.model.ParagraphVocabulary">
+    insert into t_paragraph_vocabulary
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="paragraphId != null">
+        paragraph_id,
+      </if>
+      <if test="word != null">
+        word,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="paragraphId != null">
+        #{paragraphId,jdbcType=VARCHAR},
+      </if>
+      <if test="word != null">
+        #{word,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <insert id="insertWordsOfOneParagraph">
+    insert into t_paragraph_vocabulary(paragraph_id, word)
+    values <foreach collection="wordList" separator="," item="item">
+    (#{paragraphId}, #{item})
+  </foreach>
+  </insert>
+
+</mapper>

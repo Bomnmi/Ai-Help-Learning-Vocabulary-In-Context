@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ailearningvocabulary.bomnmi.dataset.mappers.QuizMapper">
+     <resultMap id="BaseResultMap" type="com.ailearningvocabulary.bomnmi.api.model.Quiz">
+         <id column="id" property="id"></id>
+         <result column="user_id" property="userId"/>
+         <result column="score" property="score"/>
+         <result column="create_time" property="createTime"/>
+     </resultMap>
+    <sql id="Base_Column_List">
+        id, user_id, score, create_time
+    </sql>
+    <insert id="insert">
+        insert into t_quiz value(#{id}, #{userId}, #{score}, #{createTime})
+    </insert>
+    <select id="selectAllQuizByUserId" resultType="com.ailearningvocabulary.bomnmi.api.model.Quiz">
+        select <include refid="Base_Column_List"></include> from t_quiz where user_id = #{userId};
+
+    </select>
+
+
+</mapper>

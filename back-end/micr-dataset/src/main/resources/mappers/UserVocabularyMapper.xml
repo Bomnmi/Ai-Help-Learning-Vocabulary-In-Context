@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ailearningvocabulary.bomnmi.dataset.mappers.UserVocabularyMapper">
+  <resultMap id="BaseResultMap" type="com.ailearningvocabulary.bomnmi.api.model.UserVocabulary">
+    <id column="user_id" jdbcType="VARCHAR" property="userId" />
+    <id column="word" jdbcType="VARCHAR" property="word" />
+    <result column="add_time" jdbcType="TIMESTAMP" property="addTime" />
+    <result column="last_review_time" jdbcType="TIMESTAMP" property="lastReviewTime" />
+    <result column="review_times" jdbcType="INTEGER" property="reviewTimes" />
+    <result column="ef" jdbcType="DOUBLE" property="ef"/>
+    <result column="next_review_time" jdbcType="TIMESTAMP" property="nextReviewTime"/>
+    <result column="used" property="used"/>
+    <result column="translation" property="translation"/>
+    <result column="definition" property="definition"/>
+    <result column="pronunciation" property="pronunciation"/>
+  </resultMap>
+  <sql id="Base_Column_List">
+    user_id, word, add_time, last_review_time, review_times, ef, next_review_time, used, translation, definition,pronunciation
+  </sql>
+
+  <select id="selectAllWordsByUserId" resultType="com.ailearningvocabulary.bomnmi.api.model.UserVocabulary">
+    select <include refid="Base_Column_List"></include> from t_user_vocabulary where user_id = #{userId}
+  </select>
+
+
+  <select id="selectByPrimaryKey" parameterType="com.ailearningvocabulary.bomnmi.api.model.UserVocabularyKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_user_vocabulary
+    where user_id = #{userId,jdbcType=VARCHAR}
+      and word = #{word,jdbcType=VARCHAR}
+  </select>
+  <select id="selectReviewNeedWordsByUserIdByNextReviewTime"
+          resultType="com.ailearningvocabulary.bomnmi.api.model.UserVocabulary">
+    /*If we use test, we need to change the DATE() to CAST(xx as DATE)*/
+    select <include refid="Base_Column_List"></include> from t_user_vocabulary
+    where user_id = #{userId} and IFNULL(DATE(next_review_time), '2001-07-14') &lt;= CURDATE() and used = 0;
+
+  </select>
+    <select id="selectTodayAddedWordsByUserId"
+            resultType="com.ailearningvocabulary.bomnmi.api.model.UserVocabulary">
+      select <include refid="Base_Column_List"></include> from t_user_vocabulary where DATE (add_time) = CURDATE() and user_id = #{userId} ORDER BY add_time;
+    </select>
+    <select id="selectTodayLearnedWordsByUserId"
+            resultType="com.ailearningvocabulary.bomnmi.api.model.UserVocabulary">
+      select <include refid="Base_Column_List"></include> from t_user_vocabulary
+        where user_id = #{userId} and IFNULL(DATE(last_review_time), '2001-07-14')= CURDATE();
+    </select>
+    <select id="selectRecentWordsByUserId"
+            resultType="com.ailearningvocabulary.bomnmi.api.model.UserVocabulary">
+      select <include refid="Base_Column_List"></include> from t_user_vocabulary where
+      user_id = #{userId} and DATEDIFF(DATE(add_time) - CURDATE()) >= #{days}
+    </select>
+    <select id="selectWordsByQuizSetting"
+            resultType="com.ailearningvocabulary.bomnmi.api.model.UserVocabulary">
+        select <include refid="Base_Column_List"></include> from t_user_vocabulary where user_id = #{userId}
+        <choose>
+          <when test="quizSetting.datasetSetting == 0 and quizSetting.patternSetting == 0">
+              AND DATE(add_time) = CURDATE() order by RAND()
+          </when>
+          <when test="quizSetting.datasetSetting == 1 and quizSetting.patternSetting == 0">
+              order by RAND()
+          </when>
+          <when test="quizSetting.datasetSetting == 1 and quizSetting.patternSetting == 1">
+              order by add_time
+          </when>
+          <when test="quizSetting.datasetSetting == 1 and quizSetting.patternSetting == 2">
+              order by review_times
+          </when>
+          <when test="quizSetting.datasetSetting == 1 and quizSetting.patternSetting == 3">
+              order by ef
+          </when>
+        </choose>
+        LIMIT 0, ${quizSetting.numberOfWords};
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="com.ailearningvocabulary.bomnmi.api.model.UserVocabularyKey">
+    delete from t_user_vocabulary
+    where user_id = #{userId,jdbcType=VARCHAR}
+      and word = #{word,jdbcType=VARCHAR}
+  </delete>
+
+  <insert id="insert" parameterType="com.ailearningvocabulary.bomnmi.api.model.UserVocabulary">
+    insert into t_user_vocabulary (user_id, word, add_time, last_review_time, review_times,ef,next_review_time, used, translation, definition, pronunciation)
+    values (#{userId,jdbcType=VARCHAR}, #{word,jdbcType=VARCHAR}, #{addTime,jdbcType=TIMESTAMP}, #{lastReviewTime,jdbcType=TIMESTAMP}, #{reviewTimes,jdbcType=INTEGER}, #{ef}, #{nextReviewTime}, #{used},#{translation}, #{definition}, #{pronunciation})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ailearningvocabulary.bomnmi.api.model.UserVocabulary">
+    insert into t_user_vocabulary
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="word != null">
+        word,
+      </if>
+      <if test="addTime != null">
+        add_time,
+      </if>
+      <if test="lastReviewTime != null">
+        last_review_time,
+      </if>
+      <if test="reviewTimes != null">
+        review_times,
+      </if>
+      <if test="ef != null">
+        ef,
+      </if>
+      <if test="nextReviewTime != null">
+        next_review_time,
+      </if>
+      <if test="used != null">
+        used,
+      </if>
+      <if test="translation != null">
+        translation,
+      </if>
+      <if test="definition != null">
+        definition,
+      </if>
+      <if test="pronunciation != null">
+        pronunciation,
+      </if>
+
+
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="word != null">
+        #{word,jdbcType=VARCHAR},
+      </if>
+      <if test="addTime != null">
+        #{addTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastReviewTime != null">
+        #{lastReviewTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="reviewTimes != null">
+        #{reviewTimes,jdbcType=INTEGER},
+      </if>
+      <if test="ef != null">
+        #{ef},
+      </if>
+      <if test="nextReviewTime != null">
+        #{nextReviewTime},
+      </if>
+      <if test="used != null">
+        #{used},
+      </if>
+      <if test="translation != null">
+        #{translation},
+      </if>
+      <if test="definition != null">
+        #{definition},
+      </if>
+      <if test="pronunciation != null">
+        #{pronunciation},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ailearningvocabulary.bomnmi.api.model.UserVocabulary">
+    update t_user_vocabulary
+    <set>
+      <if test="addTime != null">
+        add_time = #{addTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastReviewTime != null">
+        last_review_time = #{lastReviewTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="reviewTimes != null">
+        review_times = #{reviewTimes,jdbcType=INTEGER},
+      </if>
+      <if test="ef != null">
+        ef = #{ef},
+      </if>
+      <if test="nextReviewTime != null">
+        next_review_time = #{nextReviewTime},
+      </if>
+      <if test="used != null">
+        used = #{used},
+      </if>
+      <if test="translation != null">
+        translation = #{translation},
+      </if>
+      <if test="definition != null">
+        definition = #{definition},
+      </if>
+      <if test="pronunciation != null">
+        pronunciation = #{pronunciation},
+      </if>
+    </set>
+    where user_id = #{userId,jdbcType=VARCHAR}
+      and word = #{word,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ailearningvocabulary.bomnmi.api.model.UserVocabulary">
+    update t_user_vocabulary
+    set add_time = #{addTime,jdbcType=TIMESTAMP},
+        last_review_time = #{lastReviewTime,jdbcType=TIMESTAMP},
+        review_times = #{reviewTimes,jdbcType=INTEGER},
+        ef = #{ef},
+        next_review_time = #{nextReviewTime},
+        used = #{used},
+        translation = #{translation},
+        definition = #{definition},
+        pronunciation = #{pronunciation}
+    where user_id = #{userId,jdbcType=VARCHAR}
+      and word = #{word,jdbcType=VARCHAR}
+  </update>
+  <update id="updateBatchUserVocabulary">
+    <foreach collection="list" item="item" separator=";">
+      update t_user_vocabulary
+      <set>
+        <if test="item.addTime != null">
+          add_time = #{item.addTime,jdbcType=TIMESTAMP},
+        </if>
+        <if test="item.lastReviewTime != null">
+          last_review_time = #{item.lastReviewTime,jdbcType=TIMESTAMP},
+        </if>
+        <if test="item.reviewTimes != null">
+          review_times = #{item.reviewTimes,jdbcType=INTEGER},
+        </if>
+        <if test="item.ef != null">
+          ef = #{item.ef},
+        </if>
+        <if test="item.nextReviewTime != null">
+          next_review_time = #{item.nextReviewTime},
+        </if>
+        <if test="item.used != null">
+          used = #{item.used},
+        </if>
+        <if test="item.translation != null">
+          translation = #{item.translation},
+        </if>
+        <if test="item.definition != null">
+          definition = #{item.definition},
+        </if>
+        <if test="item.pronunciation != null">
+          pronunciation = #{item.pronunciation},
+        </if>
+      </set>
+      where user_id = #{item.userId,jdbcType=VARCHAR}
+      and word = #{item.word,jdbcType=VARCHAR}
+    </foreach>
+  </update>
+</mapper>

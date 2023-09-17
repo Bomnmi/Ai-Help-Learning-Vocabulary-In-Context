@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ailearningvocabulary.bomnmi.dataset.mappers.ParagraphMapper">
+  <resultMap id="BaseResultMap" type="com.ailearningvocabulary.bomnmi.api.model.Paragraph">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId"/>
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="read_status" property="readStatus"/>
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.ailearningvocabulary.bomnmi.api.model.Paragraph">
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+    <result column="marked_content" jdbcType="LONGVARCHAR" property="markedContent" />
+    <result column="translation_content" jdbcType="LONGVARCHAR" property="translationContent"/>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, user_id, title, create_time, read_status
+  </sql>
+  <sql id="Blob_Column_List">
+    content, marked_content, translation_content
+  </sql>
+
+  <insert id="insertBatchParagraphs">
+      insert into t_paragraph(id, user_id, title, content, marked_content, translation_content,create_time, read_status)
+      values <foreach collection="list" separator="," item="item">
+      (#{item.id}, #{item.userId}, #{item.title}, #{item.content}, #{item.markedContent},#{item.translationContent},#{item.createTime}, #{item.readStatus})
+    </foreach>
+  </insert>
+    <update id="updateSelectiveParagraph">
+      update t_paragraph
+      <set>
+        <if test="title != null">
+          title = #{title},
+        </if>
+        <if test="createTime != null">
+          create_time = #{createTime},
+        </if>
+        <if test="content != null">
+          content = #{content},
+        </if>
+        <if test="readStatus != null">
+          read_status = #{readStatus},
+        </if>
+        <if test="markedContent != null">
+          marked_content = #{markedContent},
+        </if>
+        <if test="translationContent != null">
+          translation_content = #{translationContent},
+        </if>
+      </set>
+        where id = #{id}
+    </update>
+    <select id="selectUnReadParagraphByUserId" resultType="com.ailearningvocabulary.bomnmi.api.model.Paragraph">
+    select <include refid="Base_Column_List"></include>,<include refid="Blob_Column_List"></include>
+           from t_paragraph where user_id = #{userId} and read_status = 0;
+  </select>
+    <select id="selectParagraphByParagraphId" resultType="com.ailearningvocabulary.bomnmi.api.model.Paragraph">
+      select <include refid="Base_Column_List"></include>,
+      <include refid="Blob_Column_List"></include> from t_paragraph where id = #{paragraphId};
+
+    </select>
+</mapper>

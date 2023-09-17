@@ -1,0 +1,6 @@
+com\ailearningvocabulary\bomnmi\common\constants\RedisConstant.class
+com\ailearningvocabulary\bomnmi\common\interfaces\ResponseInfoInterface.class
+com\ailearningvocabulary\bomnmi\common\utils\CommonUtil.class
+com\ailearningvocabulary\bomnmi\common\exception\ProjectException.class
+com\ailearningvocabulary\bomnmi\common\enums\ResultCode.class
+com\ailearningvocabulary\bomnmi\common\utils\ReflectUtil.class

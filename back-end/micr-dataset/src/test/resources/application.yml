@@ -1,0 +1,37 @@
+#server name
+spring:
+  application:
+    name: micr-dataservice
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:ai_vocabulary;DB_CLOSE_DELAY=-1
+    username: sa
+    password: sa
+  sql:
+    init:
+      schema-locations: classpath:db/schema-h2.sql
+  redis:
+    database: 1
+    host: localhost
+    port: 6379
+
+mybatis:
+  mapper-locations: classpath:/mappers/**/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+
+dubbo:
+  registry:
+    address: zookeeper://localhost:2181
+  scan:
+    base-packages: com.bjpowernode.dataservice.service
+  provider:
+    timeout: 20000
+    retries: 0
+
+ai:
+  config:
+    password-salt: dc07afb15ad84dfcb2d87c8a3e7e4a89
+
+

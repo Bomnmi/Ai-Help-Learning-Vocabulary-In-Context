@@ -1,0 +1,63 @@
+#Config server port and context path
+spring:
+  application:
+    name: micr-web
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher #This configuration is in order to enable the Swagger UI
+  redis:
+    port: 6379
+    host: localhost
+
+  #spring mail
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: bomnmi123@gmail.com
+    password: phecsditbvzgvbev
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+
+server:
+  port: 8001
+  servlet:
+    context-path: /ai
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+#Dubbo Configuration
+dubbo:
+  registry:
+    address: zookeeper://localhost:2181
+  scan:
+    base-packages: com.ailearningvocabulary.bomnmi.micrweb
+  consumer:
+    check: false
+    timeout: 50000
+    retries: 0
+
+ai:
+  chat-gpt:
+    api-key: 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
+    words-limit: 5
+    token-limit: 1000
+    paragraph-type: article,paragraph,context,story
+  free-dicitionay:
+    url: https://api.dictionaryapi.dev/api/v2/entries/en/
+  deepL:
+    url: https://api-free.deepl.com/v2/translate
+    api-key: 520827e9-d840-f6ae-fd96-ab0f2ceddb21:fx
+  recent-days: 7
+  quiz-setting:
+    distract-options: 3
+
+
+
+

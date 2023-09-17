@@ -1,0 +1,10 @@
+com\ailearningvocabulary\bomnmi\api\model\FriendKey.class
+com\ailearningvocabulary\bomnmi\api\model\Friend.class
+com\ailearningvocabulary\bomnmi\api\service\UserService.class
+com\ailearningvocabulary\bomnmi\api\model\Record.class
+com\ailearningvocabulary\bomnmi\api\model\ParagraphVocabulary.class
+com\ailearningvocabulary\bomnmi\api\model\User.class
+com\ailearningvocabulary\bomnmi\api\model\Vocabulary.class
+com\ailearningvocabulary\bomnmi\api\model\Paragraph.class
+com\ailearningvocabulary\bomnmi\api\model\UserVocabularyKey.class
+com\ailearningvocabulary\bomnmi\api\model\UserVocabulary.class
