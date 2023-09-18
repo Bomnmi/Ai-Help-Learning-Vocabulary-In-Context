@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed5384b-5d43-4406-a0d5-24d7c52b5a79" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/micr-web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/micr-web/src/main/resources/application.yml" afterDir="false" />
-    </list>
+    <list default="true" id="6ed5384b-5d43-4406-a0d5-24d7c52b5a79" name="Changes" comment="Modify api key" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -341,8 +339,23 @@
       <workItem from="1694982586313" duration="403000" />
       <workItem from="1694983067409" duration="289000" />
       <workItem from="1694986595672" duration="98000" />
-      <workItem from="1694986724044" duration="669000" />
+      <workItem from="1694986724044" duration="757000" />
     </task>
+    <task id="LOCAL-00001" summary="Delete Api key">
+      <created>1694987438234</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694987438234</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Modify api key">
+      <created>1694987465173</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1694987465173</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,6 +371,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Delete Api key" />
+    <MESSAGE value="Modify api key" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modify api key" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
